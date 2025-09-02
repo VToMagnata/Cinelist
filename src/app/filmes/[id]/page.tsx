@@ -6,6 +6,20 @@ type Props = {
   }>;
 };
 
+export const generateMetadata = async ({ params }: Props) => {
+  const { id } = await params;
+  const details = await GetDetails(id);
+
+  if (!details) {
+    return;
+  }
+
+  return {
+    title: `${details.original_title} | Cinelista`,
+    description: details.overview,
+  };
+};
+
 const DetalhesFilme = async ({ params }: Props) => {
   const { id } = await params;
   const details = await GetDetails(id);
