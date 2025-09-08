@@ -1,0 +1,30 @@
+[
+  {
+    "id": 5,
+    "titulo": "Introdução ao Next.js 13",
+    "autor": "Lucas Pereira",
+    "data": "2025-09-01",
+    "conteudo": "Next.js 13 é um framework React que oferece renderização híbrida, roteamento simplificado e otimizações automáticas de performance."
+  },
+  {
+    "id": 6,
+    "titulo": "CSS Animations na Prática",
+    "autor": "Beatriz Santos",
+    "data": "2025-08-20",
+    "conteudo": "As animações em CSS permitem criar efeitos visuais suaves sem a necessidade de JavaScript, melhorando a experiência do usuário."
+  },
+  {
+    "id": 7,
+    "titulo": "TypeScript Avançado",
+    "autor": "Fernando Almeida",
+    "data": "2025-07-30",
+    "conteudo": "Aprenda tipos genéricos, interfaces complexas e utilitários do TypeScript para escrever código mais seguro e escalável."
+  },
+  {
+    "id": 8,
+    "titulo": "Introdução ao Tailwind CSS",
+    "autor": "Juliana Costa",
+    "data": "2025-06-05",
+    "conteudo": "Tailwind CSS é um framework utilitário que permite estilizar elementos de forma rápida e consistente usando classes prontas."
+  }
+]

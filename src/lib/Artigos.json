@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "titulo": "Introdução ao TypeScript",
+    "autor": "Vitor Losina",
+    "data": "2025-09-08",
+    "conteudo": "O TypeScript é um superconjunto do JavaScript que adiciona tipagem estática ao código, ajudando a evitar erros comuns."
+  },
+  {
+    "id": 2,
+    "titulo": "Guia de Flexbox",
+    "autor": "Ana Silva",
+    "data": "2025-08-25",
+    "conteudo": "O Flexbox é uma ferramenta poderosa do CSS que permite criar layouts flexíveis e responsivos de forma mais simples."
+  },
+  {
+    "id": 3,
+    "titulo": "Aprendendo React",
+    "autor": "Carlos Souza",
+    "data": "2025-07-10",
+    "conteudo": "React é uma biblioteca JavaScript para criar interfaces de usuário de forma declarativa e eficiente, utilizando componentes reutilizáveis."
+  },
+  {
+    "id": 4,
+    "titulo": "Boas práticas em JavaScript",
+    "autor": "Mariana Lima",
+    "data": "2025-06-15",
+    "conteudo": "Seguir boas práticas em JavaScript ajuda a manter o código legível, escalável e livre de bugs comuns."
+  }
+]

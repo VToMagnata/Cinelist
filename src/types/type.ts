@@ -1,6 +1,7 @@
-export interface Filme {
+export interface Artigo {
   id: number;
-  original_title: string;
-  overview: string;
-  poster_path: string;
+  titulo: string;
+  autor: string;
+  data: string;
+  conteudo: string;
 }

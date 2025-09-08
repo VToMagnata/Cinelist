@@ -1,26 +1,23 @@
-import { Filme } from "@/types/type";
+import { Artigo } from "@/types/type";
 import Link from "next/link";
 
 type Props = {
-  filme: Filme;
+  artigo: Artigo;
 };
 
-export default function Card({ filme }: Props) {
-  const { id, original_title, overview, poster_path } = filme;
+export default function Card({ artigo }: Props) {
+  const { id, conteudo, titulo, autor, data } = artigo;
   const resume =
-    overview?.length >= 200 ? `${overview.substring(0, 200)}...` : overview;
+    conteudo?.length >= 200 ? `${conteudo.substring(0, 200)}...` : conteudo;
 
   return (
     <Link
-      href={`/filmes/${id}`}
-      className="w-[90%] h-[30em] flex flex-col bg-[#1f1f1f] justify-start items-center rounded-xl text-center transform transition duration-300 hover:scale-110"
+      href={`/artigos/${id}`}
+      className="w-[90%] h-[30em] gap-8 flex flex-col bg-[#1f1f1f] justify-start items-center rounded-xl text-center transform transition duration-300 hover:scale-110"
     >
-      <img
-        src={`https://image.tmdb.org/t/p/w300${poster_path}`}
-        alt={`Poste de ${original_title}`}
-        className="w-full h-[60%] rounded-tl-xl rounded-tr-xl"
-      />
-      <h1 className="m-2 font-bold text-red-500">{original_title}</h1>
+      <h1 className="m-2 font-bold text-red-500">{titulo}</h1>
+      <h2 className="italic, text-gray-700">{autor}</h2>
+      <h3>{data}</h3>
       <p className="italic">{resume}</p>
     </Link>
   );

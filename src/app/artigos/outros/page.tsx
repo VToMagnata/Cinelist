@@ -1,12 +1,10 @@
-import { GetTopFilms } from "@/lib/api/services";
+import Artigos from "@/lib/Artigos2.json";
 import Grid from "@/app/components/Grid";
 
 export default async function PageAlta() {
-  const FilmesList = await GetTopFilms();
-
   return (
     <main className="w-full h-full flex justify-center items-center bg-gradient-to-b from-black to-gray-900">
-      <Grid filmes={FilmesList} />
+      <Grid artigos={Artigos} />
     </main>
   );
 }
