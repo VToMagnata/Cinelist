@@ -26,3 +26,5 @@ jobs:
 
       - name: Rodar o build
         run: npm run build
+        env:
+          AUTORIZATION: ${{ secrets.AUTORIZATION }} 
