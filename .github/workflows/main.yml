@@ -5,15 +5,17 @@ on:
   push:
     branches:
       - main
-    paths: # Só dispara se os arquivos dessa pasta mudarem
-    - "src/**" # Só mudanças no codigo fonte
-    - ".github/workflows/**" # Mudança no próprios pipelines
-  workflow_dispatch: # Habilita o botão "Run workflow" no GitHub Actions
+    paths:
+      - "src/**"                # Só dispara se os arquivos do código fonte mudarem
+      - ".github/workflows/**"  # Ou se o próprio pipeline mudar
+  workflow_dispatch:            # Habilita o botão "Run workflow" no GitHub Actions
 
 jobs:
-  # Primeiro job: build
+  # ===============================
+  # Job 1: Build
+  # ===============================
   build:
-    runs-on: ubuntu-latest # Imagem da máquina no CI
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout do código
@@ -34,10 +36,14 @@ jobs:
         env:
           AUTORIZATION: ${{ secrets.AUTORIZATION }}
 
-    test:
-      runs-on: ubuntu-latest
-      needs: build
+  # ===============================
+  # Job 2: Testes
+  # ===============================
+  test:
+    runs-on: ubuntu-latest
+    needs: build   # Só roda depois do build
 
+    steps:
       - name: Checkout do código
         uses: actions/checkout@v4
 
@@ -52,7 +58,7 @@ jobs:
         run: npm run lint
         
       - name: Verificar formatação
-        run: npm run format -- -- check
+        run: npm run format -- --check
 
       - name: Rodar testes
         run: npm run test
