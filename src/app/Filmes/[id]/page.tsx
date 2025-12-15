@@ -6,9 +6,21 @@ type Props = {
   }>;
 };
 
+export const generateMetadata = async ({ params }: Props) => {
+  const { id } = await params;
+  const filme = await getDetails(id);
+
+  if (!filme) return;
+
+  return {
+    title: filme.title,
+    description: filme.overview,
+  };
+};
+
 export default async function Page({ params }: Props) {
   const { id } = await params;
-  const filme = await getDetails(id); // <--- ESSA LINHA AQUI RESOLVE
+  const filme = await getDetails(id);
 
   if (!filme) {
     return <h1>Filme não encontrado</h1>;
